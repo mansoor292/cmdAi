@@ -18,7 +18,7 @@ if code is requested for certain files, use the format to make sure the files ar
           "files": [
             {
               "name": "",
-              "contents":"CODE or if structure 3 word summary"
+              "contents":"Detailed File Description. What specific functions are critical in this file?"
             }
           ],
           "directories": []

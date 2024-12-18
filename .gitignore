@@ -12,6 +12,8 @@ yarn-error.log
 # Build output
 dist/
 build/
+chat_sessions/
+output/
 
 # OS files
 .DS_Store

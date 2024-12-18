@@ -1,14 +1,10 @@
-import fs from 'fs/promises';
 import path from 'path';
 import { JSONUtils } from './jsonUtils.js';
+import { FileSystemInterface } from './fsInterface.js';
 
 export class FileProcessor {
-    /**
-     * Processes a JSON structure and creates corresponding files and directories
-     * @param {Object} structure - The JSON structure defining files and directories
-     * @param {string} basePath - The base path where to create the structure
-     * @param {Array<string>} specificFiles - Optional array of specific files to process
-     */
+    static fsInterface = new FileSystemInterface();
+
     static async processStructure(structure, basePath, specificFiles = null) {
         if (!structure.project || !structure.project.rootDirectory) {
             throw new Error('Invalid project structure. Must contain project and rootDirectory.');
@@ -18,18 +14,12 @@ export class FileProcessor {
         const projectPath = path.join(basePath, rootDir.name);
 
         // Create the root directory
-        await fs.mkdir(projectPath, { recursive: true });
+        await this.fsInterface.createDir(projectPath);
 
         // Process the contents
         await this.processContents(rootDir.contents, projectPath, specificFiles);
     }
 
-    /**
-     * Gets all file paths from the structure
-     * @param {Object} contents - The contents object
-     * @param {string} basePath - The current path (used for recursion)
-     * @returns {Array<string>} - Array of all file paths
-     */
     static getAllFilePaths(contents, basePath = '') {
         const paths = [];
 
@@ -51,12 +41,6 @@ export class FileProcessor {
         return paths;
     }
 
-    /**
-     * Creates a subset of the project structure containing only specified files
-     * @param {Object} structure - The full project structure
-     * @param {Array<string>} filePaths - Array of file paths to include
-     * @returns {Object} - A new structure containing only the specified files
-     */
     static createSubsetStructure(structure, filePaths) {
         const subset = {
             project: {
@@ -97,39 +81,20 @@ export class FileProcessor {
         return subset;
     }
 
-    /**
-     * Ensures a directory exists
-     * @param {string} dirPath - Path to the directory
-     */
     static async ensureDirectoryExists(dirPath) {
-        try {
-            await fs.access(dirPath);
-        } catch {
-            await fs.mkdir(dirPath, { recursive: true });
-        }
+        await this.fsInterface.createDir(dirPath);
     }
 
-    /**
-     * Ensures a file exists
-     * @param {string} filePath - Path to the file
-     */
     static async ensureFileExists(filePath) {
-        try {
-            await fs.access(filePath);
-        } catch {
-            // Create the directory if it doesn't exist
-            await this.ensureDirectoryExists(path.dirname(filePath));
-            // Create an empty file
-            await fs.writeFile(filePath, '');
+        // Create the directory if it doesn't exist
+        await this.ensureDirectoryExists(path.dirname(filePath));
+        // Create an empty file if it doesn't exist
+        const exists = await this.fsInterface.readFile(filePath);
+        if (!exists) {
+            await this.fsInterface.writeFile(filePath, '');
         }
     }
 
-    /**
-     * Recursively processes contents of a directory
-     * @param {Object} contents - The contents object containing files and directories
-     * @param {string} currentPath - The current directory path
-     * @param {Array<string>} specificFiles - Optional array of specific files to process
-     */
     static async processContents(contents, currentPath, specificFiles = null) {
         if (!contents) return;
 
@@ -155,7 +120,7 @@ export class FileProcessor {
                     const fileContents = typeof file.contents === 'string' 
                         ? file.contents 
                         : JSON.stringify(file.contents, null, 2);
-                    await fs.writeFile(filePath, fileContents);
+                    await this.fsInterface.writeFile(filePath, fileContents);
                 }
             }
         }
@@ -176,12 +141,6 @@ export class FileProcessor {
         }
     }
 
-    /**
-     * Validates and processes JSON content into file structure
-     * @param {string} content - The JSON content to process
-     * @param {string} outputPath - The base path where to create the structure
-     * @param {Array<string>} specificFiles - Optional array of specific files to process
-     */
     static async processJSONContent(content, outputPath, specificFiles = null) {
         try {
             let structure;
@@ -210,12 +169,6 @@ export class FileProcessor {
         }
     }
 
-    /**
-     * Process structure in chunks and return subset structures
-     * @param {Object} structure - The project structure
-     * @param {number} chunkSize - Size of each chunk
-     * @returns {Array<Object>} Array of subset structures
-     */
     static getStructureChunks(structure, chunkSize = 3) {
         const chunks = [];
         const rootDir = structure.project.rootDirectory;

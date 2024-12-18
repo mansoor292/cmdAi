@@ -171,13 +171,26 @@ export class BedrockChat {
                 throw new Error('Invalid message format');
             }
 
-            // Format conversation history into a single string
+            // Format conversation history based on model type
             let input = '';
-            for (const msg of messages) {
-                if (msg.role === 'system') {
-                    input += `${msg.content}\n\n`;
-                } else {
-                    input += `${msg.role === 'user' ? 'Human' : 'Assistant'}: ${msg.content}\n\n`;
+            if (this.modelId.startsWith('amazon.titan')) {
+                // Format for Titan models
+                input = messages.map(msg => {
+                    if (msg.role === 'system') {
+                        return `Instructions: ${msg.content}\n\n`;
+                    } else {
+                        return `${msg.role === 'user' ? 'User' : 'Assistant'}: ${msg.content}\n\n`;
+                    }
+                }).join('');
+                input += 'Assistant:';
+            } else {
+                // Format for Claude models
+                for (const msg of messages) {
+                    if (msg.role === 'system') {
+                        input += `${msg.content}\n\n`;
+                    } else {
+                        input += `${msg.role === 'user' ? 'Human' : 'Assistant'}: ${msg.content}\n\n`;
+                    }
                 }
             }
 
