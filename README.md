@@ -16,7 +16,10 @@ A powerful command-line interface (CLI) chat application that integrates with AW
 
 - Node.js installed on your system
 - AWS account with Bedrock access
-- AWS credentials configured (`~/.aws/credentials`)
+- AWS credentials configured (`~/.aws/credentials`) with permissions to access Bedrock models
+  - Your AWS credentials must have explicit access to the Bedrock models you want to use
+  - Run `node model-list.js` in the root directory to see which models your AWS profile has access to
+  - Use any of the available model IDs in your `.env` configuration
 
 ## Setup
 
@@ -25,14 +28,21 @@ A powerful command-line interface (CLI) chat application that integrates with AW
    ```bash
    npm install
    ```
-3. Configure environment variables:
+3. Check available models:
+   ```bash
+   node model-list.js
+   ```
+   This will show you which Bedrock models your AWS profile has access to. You'll need this information for the next step.
+
+4. Configure environment variables:
    - Copy `.env.example` to `.env`
    - Set your AWS region and model preferences
+   - Use a model ID from the list generated in step 3
    ```env
    AWS_REGION=us-east-1
    DEFAULT_TEMPERATURE=0.7
    MAX_TOKENS=4096
-   MODEL_ID=anthropic.claude-3-haiku-20240307-v1:0
+   MODEL_ID=anthropic.claude-3-haiku-20240307-v1:0  # Use an available model from model-list.js
    ```
 
 ## Usage
@@ -46,13 +56,35 @@ npm start
 
 Type these commands during chat:
 
-- `/help` - Show available commands
-- `/clear` - Clear chat history
-- `/save` - Save current chat session
-- `/load` - Load a previous chat session
-- `/dev` - Toggle developer mode
-- `/preprompt` - Select a different pre-prompt style
-- `/quit` - Exit the application
+- `/new` - Start a new chat session
+- `/load` - Load a previous session
+- `/list` - List all available sessions
+- `/clear` - Clear the current session
+- `/prompt` - Manage preprompts
+- `/switch` - Switch preprompt or set custom prompt:
+  1. Use saved preprompt: `/switch [name] [extra prompt]`
+     - `[name]`: Name of the preprompt to switch to
+     - `[extra prompt]`: Optional additional instructions
+     - Example: `/switch technical focus on performance`
+  2. Use custom prompt: `/switch custom [prompt]`
+     - Sets a completely custom system prompt
+     - Example: `/switch custom You are a SQL expert`
+- `/file` - Save last response to file (`/file [path]`)
+- `/enrich` - Control context enrichment (`/enrich u[number] a[number]`)
+  - `u[number]`: Number of user prompts to include (default: 3)
+  - `a[number]`: Number of AI responses to include (default: 0)
+  - Example: `/enrich u5 a3` - Include last 5 user prompts and 3 AI responses
+- `/processfile` - Create project structure from JSON response
+  - Must be valid JSON with project.rootDirectory structure
+- `/processStructure [--continue] [prompt]` - Process project structure in chunks
+  - Processes JSON structure with optional custom prompt
+  - `--continue`: Automatically process all chunks without waiting
+  - Shows each chunk with structure prompt and custom prompt
+- `/script` - Run a script of commands separated by | (`/script command1 | command2 | command3`)
+- `/restart` - Restart session with current preprompt
+- `/dev` - Toggle developer mode (shows full prompt before sending)
+- `/exit` - Exit the application
+- `/help` - Show these commands
 
 ## Project Structure
 
@@ -70,7 +102,6 @@ src/
 │   └── uiUtils.js         # UI utilities
 ├── preprompts/             # Pre-prompt templates
 └── chat_sessions/         # Saved chat sessions
-
 ```
 
 ## Configuration

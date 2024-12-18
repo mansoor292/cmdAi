@@ -47,7 +47,7 @@
     {
         "ModelId": "amazon.titan-embed-g1-text-02",
         "Status": "ACTIVE",
-        "available": false
+        "available": true
     },
     {
         "ModelId": "amazon.titan-text-lite-v1",
@@ -62,7 +62,7 @@
     {
         "ModelId": "amazon.titan-embed-text-v1",
         "Status": "ACTIVE",
-        "available": false
+        "available": true
     },
     {
         "ModelId": "amazon.titan-embed-text-v2:0",
