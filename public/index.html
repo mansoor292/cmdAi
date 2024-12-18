@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Terminal</title>
+    <link rel="stylesheet" href="xterm/css/xterm.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #1e1e1e;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        #terminal {
+            flex: 1;
+            background-color: #000;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="terminal"></div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="xterm/lib/xterm.js"></script>
+    <script>
+        const socket = io();
+        const term = new Terminal({
+            cursorBlink: true,
+            theme: {
+                background: '#000',
+                foreground: '#fff'
+            }
+        });
+
+        term.open(document.getElementById('terminal'));
+
+        // Handle terminal input
+        term.onData(data => {
+            socket.emit('input', data);
+        });
+
+        // Handle terminal output
+        socket.on('output', data => {
+            term.write(data);
+        });
+
+        // Handle connection status
+        socket.on('connect', () => {
+            term.write('\r\n🟢 Connected to server\r\n');
+        });
+
+        socket.on('disconnect', () => {
+            term.write('\r\n🔴 Disconnected from server\r\n');
+        });
+    </script>
+</body>
+</html>

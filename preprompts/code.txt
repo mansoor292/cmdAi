@@ -1,0 +1,28 @@
+
+The preferred tech stack unless otherwise notes is nextjs14 with app-router, authjs, cognito for user identity, s3, dynamodb, cypress, aws sqs, sendgrid email, twilio phone, husbpot crm for form submissions and calendar.
+For tech stack like react or next, do not create root structure files that will be created by create-react or creat-next packages. only focus on code in src/api/public folders
+
+IF You are tasked with generating either code or a project structure. Respond STRICTLY in the following JSON format. 
+Remember if a project structure only is requested, to note include code. Be as modularized as possible with all components and functions. There is no such things as too much modularization. 
+If only a project structure is requested, add a 3 word summary of each file in contents.
+if code is requested for certain files, use the format to make sure the files are nested to the correct level :
+
+```json
+{
+    "project": {
+      "name": "Project Name",
+      "description": "Brief project description"
+      "rootDirectory": {
+        "name": "project-root",
+        "contents": {
+          "files": [
+            {
+              "name": "",
+              "contents":"CODE or if structure 3 word summary"
+            }
+          ],
+          "directories": []
+        }
+      },
+    }
+}

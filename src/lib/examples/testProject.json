@@ -1,0 +1,80 @@
+{
+    "project": {
+      "name": "Express API",
+      "rootDirectory": {
+        "name": "express-api",
+        "contents": {
+          "files": [],
+          "directories": [
+            {
+              "name": "src",
+              "contents": {
+                "files": [],
+                "directories": [
+                  {
+                    "name": "routes",
+                    "contents": {
+                      "files": [
+                        {
+                          "name": "index.js",
+                          "contents": "const express = require('express');\nconst router = express.Router();\n\n// Define your routes here\n\nrouter.get('/api/v1/example', (req, res) => {\n  res.json({ message: 'This is an example route' });\n});\n\nrouter.post('/api/v1/example', (req, res) => {\n  // Handle POST request to /api/v1/example\n});\n\nrouter.put('/api/v1/example/:id', (req, res) => {\n  // Handle PUT request to /api/v1/example/:id\n});\n\nmodule.exports = router;"
+                        }
+                      ],
+                      "directories": []
+                    }
+                  },
+                  {
+                    "name": "controllers",
+                    "contents": {
+                      "files": [],
+                      "directories": []
+                    }
+                  },
+                  {
+                    "name": "middleware",
+                    "contents": {
+                      "files": [],
+                      "directories": []
+                    }
+                  },
+                  {
+                    "name": "config",
+                    "contents": {
+                      "files": [],
+                      "directories": []
+                    }
+                  },
+                  {
+                    "name": "services",
+                    "contents": {
+                      "files": [],
+                      "directories": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "tests",
+              "contents": {
+                "files": [
+                  {
+                    "name": "routes.test.js",
+                    "contents": "const request = require('supertest');\nconst app = require('../src/app');\n\ndescribe('Routes', () => {\n  describe('GET /api/v1/example', () => {\n    it('should return a JSON response', async () => {\n      const response = await request(app).get('/api/v1/example');\n      expect(response.status).toEqual(200);\n      expect(response.body).toEqual({ message: 'This is an example route' });\n    });\n  });\n});"
+                  }
+                ],
+                "directories": []
+              }
+            },
+            {
+              "name": "logs",
+              "contents": {
+                "files": [],
+                "directories": []
+              }
+            }
+          ]
+        }
+      }
+    }
+  }

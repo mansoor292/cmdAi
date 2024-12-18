@@ -1,0 +1,88 @@
+/script 
+Establish project foundation by defining requirements, selecting technology stack, creating initial project structure, and setting up development environment with version control.
+write out the project structure in JSON only. Do not return anything other than JSON
+|/processfile|
+add code to the structure, do not write more than 5 files. please remeber JSON ONLY.
+|/processfile|
+if you have any more code files to add, please do so now. otherwise return blank.please remeber JSON ONLY.
+|/processfile|
+Develop robust user authentication system with registration, login, middleware, and initial database schema for user management.
+add code to the structure, do not write more than 5 files. please remeber JSON ONLY.
+|/processfile|
+add code to the structure, do not write more than 5 files. please remeber JSON ONLY.
+|/processfile|
+if you have any code more files to add, please do so now. otherwise return blank.please remeber JSON ONLY.
+|/processfile|
+if you have any code more files to add, please do so now. otherwise return blank.please remeber JSON ONLY.
+|/processfile|
+Implement comprehensive task management functionality including data models, CRUD operations, RESTful API endpoints, and basic task lifecycle management.
+add code to the structure, do not write more than 5 files. please remeber JSON ONLY.
+|/processfile|
+add code to the structure, do not write more than 5 files. please remeber JSON ONLY.
+|/processfile|
+if you have any code more files to add, please do so now. otherwise return blank.please remeber JSON ONLY.
+|/processfile|
+if you have any code more files to add, please do so now. otherwise return blank.please remeber JSON ONLY.
+|/processfile|
+Construct initial React frontend with authentication screens, task views, routing, and primary interaction components integrated with backend APIs.
+add code to the structure, do not write more than 5 files. please remeber JSON ONLY.
+|/processfile|
+add code to the structure, do not write more than 5 files. please remeber JSON ONLY.
+|/processfile|
+if you have any code more files to add, please do so now. otherwise return blank.please remeber JSON ONLY.
+|/processfile|
+if you have any code more files to add, please do so now. otherwise return blank.please remeber JSON ONLY.
+|/processfile|
+Enhance application with global state management, user profile features, advanced task interaction capabilities, and improved user experience design.
+add code to the structure, do not write more than 5 files. please remeber JSON ONLY.
+|/processfile|
+add code to the structure, do not write more than 5 files. please remeber JSON ONLY.
+|/processfile|
+if you have any code more files to add, please do so now. otherwise return blank.please remeber JSON ONLY.
+|/processfile|
+if you have any code more files to add, please do so now. otherwise return blank.please remeber JSON ONLY.
+|/processfile|
+Introduce advanced collaboration mechanisms including task sharing, user roles, team functionalities, and initial dashboard analytics.
+|/processfile|
+add code to the structure, do not write more than 5 files. please remeber JSON ONLY.
+|/processfile|
+if you have any code more files to add, please do so now. otherwise return blank.please remeber JSON ONLY.
+|/processfile|
+if you have any code more files to add, please do so now. otherwise return blank.please remeber JSON ONLY.
+|/processfile|
+Focus on system performance improvements through query optimization, caching, pagination, and initial performance testing.
+add code to the structure, do not write more than 5 files. please remeber JSON ONLY.
+|/processfile|
+add code to the structure, do not write more than 5 files. please remeber JSON ONLY.
+|/processfile|
+if you have any code more files to add, please do so now. otherwise return blank.please remeber JSON ONLY.
+|/processfile|
+if you have any code more files to add, please do so now. otherwise return blank.please remeber JSON ONLY.
+|/processfile|
+Conduct comprehensive security audit, implement advanced authentication, rate limiting, and prepare deployment configurations and CI/CD pipeline.
+add code to the structure, do not write more than 5 files. please remeber JSON ONLY.
+|/processfile|
+add code to the structure, do not write more than 5 files. please remeber JSON ONLY.
+|/processfile|
+if you have any code more files to add, please do so now. otherwise return blank.please remeber JSON ONLY.
+|/processfile|
+if you have any code more files to add, please do so now. otherwise return blank.please remeber JSON ONLY.
+|/processfile|
+Execute thorough testing strategy including unit, integration, and user acceptance testing, with final code optimization and documentation.
+add code to the structure, do not write more than 5 files. please remeber JSON ONLY.
+|/processfile|
+add code to the structure, do not write more than 5 files. please remeber JSON ONLY.
+|/processfile|
+if you have any code more files to add, please do so now. otherwise return blank.please remeber JSON ONLY.
+|/processfile|
+if you have any code more files to add, please do so now. otherwise return blank.please remeber JSON ONLY.
+|/processfile|
+Complete production environment setup, infrastructure configuration, monitoring implementation, and prepare for initial user launch and feedback collection.
+add code to the structure, do not write more than 5 files. please remeber JSON ONLY.
+|/processfile|
+add code to the structure, do not write more than 5 files. please remeber JSON ONLY.
+|/processfile|
+if you have any code more files to add, please do so now. otherwise return blank.please remeber JSON ONLY.
+|/processfile|
+if you have any code more files to add, please do so now. otherwise return blank.please remeber JSON ONLY.
+|/processfile|

@@ -1,0 +1,116 @@
+{
+    "project": {
+      "name": "Express API",
+      "rootDirectory": {
+        "name": "express-api",
+        "contents": {
+          "files": [
+            {
+              "name": "app.js",
+              "contents": ""
+            },
+            {
+              "name": "package.json",
+              "contents": ""
+            },
+            {
+              "name": "package-lock.json",
+              "contents": ""
+            },
+            {
+              "name": ".env",
+              "contents": ""
+            },
+            {
+              "name": ".gitignore",
+              "contents": ""
+            }
+          ],
+          "directories": [
+            {
+              "name": "src",
+              "contents": {
+                "files": [],
+                "directories": [
+                  {
+                    "name": "routes",
+                    "contents": {
+                      "files": [
+                        {
+                          "name": "index.js",
+                          "contents": ""
+                        }
+                      ],
+                      "directories": []
+                    }
+                  },
+                  {
+                    "name": "controllers",
+                    "contents": {
+                      "files": [
+                        {
+                          "name": "index.js",
+                          "contents": ""
+                        }
+                      ],
+                      "directories": []
+                    }
+                  },
+                  {
+                    "name": "middleware",
+                    "contents": {
+                      "files": [
+                        {
+                          "name": "index.js",
+                          "contents": ""
+                        }
+                      ],
+                      "directories": []
+                    }
+                  },
+                  {
+                    "name": "config",
+                    "contents": {
+                      "files": [
+                        {
+                          "name": "index.js",
+                          "contents": ""
+                        }
+                      ],
+                      "directories": []
+                    }
+                  },
+                  {
+                    "name": "services",
+                    "contents": {
+                      "files": [
+                        {
+                          "name": "index.js",
+                          "contents": ""
+                        }
+                      ],
+                      "directories": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "tests",
+              "contents": {
+                "files": [],
+                "directories": []
+              }
+            },
+            {
+              "name": "logs",
+              "contents": {
+                "files": [],
+                "directories": []
+              }
+            }
+          ]
+        }
+      }
+    }
+  }

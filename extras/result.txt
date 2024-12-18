@@ -1,0 +1,200 @@
+🚀 Starting structure processing test...
+
+
+📦 Processing files: package.json, README.md, src/index.js
+
+=== Structure Prompt ===
+You are a code generation expert. Your task is to analyze project structures and generate code for the files within them. When presented with a JSON structure containing file paths and their intended contents, you should:
+
+1. Carefully examine the structure and understand the relationships between files
+2. Consider the project context and dependencies
+3. Generate appropriate, well-formatted code for each file
+4. Ensure consistency across related files
+5. Follow best practices and conventions for the relevant programming languages
+6. Include necessary imports/exports and handle dependencies correctly
+
+The structure will be provided in a standardized JSON format with a project.rootDirectory hierarchy. Each file in the structure will be clearly identified with its path and intended purpose.
+
+Respond only with the code for the requested files, maintaining proper formatting and including any necessary comments or documentation.
+
+
+=== User Prompt ===
+
+
+=== Project Structure ===
+{
+  "project": {
+    "rootDirectory": {
+      "name": "test-project",
+      "contents": {
+        "files": [
+          {
+            "name": "package.json",
+            "contents": {
+              "name": "test-project",
+              "version": "1.0.0",
+              "description": "A test project",
+              "main": "index.js",
+              "scripts": {
+                "test": "echo \"Error: no test specified\" && exit 1"
+              }
+            }
+          },
+          {
+            "name": "README.md",
+            "contents": "# Test Project\n\nThis is a test project to demonstrate the structure processor."
+          }
+        ],
+        "directories": [
+          {
+            "name": "src",
+            "contents": {
+              "files": [
+                {
+                  "name": "index.js",
+                  "contents": "console.log('Hello from the test project!');"
+                }
+              ],
+              "directories": []
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+
+📦 Processing files: src/config.js, src/utils/helper.js, src/utils/logger.js
+
+=== Structure Prompt ===
+You are a code generation expert. Your task is to analyze project structures and generate code for the files within them. When presented with a JSON structure containing file paths and their intended contents, you should:
+
+1. Carefully examine the structure and understand the relationships between files
+2. Consider the project context and dependencies
+3. Generate appropriate, well-formatted code for each file
+4. Ensure consistency across related files
+5. Follow best practices and conventions for the relevant programming languages
+6. Include necessary imports/exports and handle dependencies correctly
+
+The structure will be provided in a standardized JSON format with a project.rootDirectory hierarchy. Each file in the structure will be clearly identified with its path and intended purpose.
+
+Respond only with the code for the requested files, maintaining proper formatting and including any necessary comments or documentation.
+
+
+=== User Prompt ===
+
+
+=== Project Structure ===
+{
+  "project": {
+    "rootDirectory": {
+      "name": "test-project",
+      "contents": {
+        "files": [],
+        "directories": [
+          {
+            "name": "src",
+            "contents": {
+              "files": [
+                {
+                  "name": "config.js",
+                  "contents": "export const config = {\n  port: 3000,\n  env: 'development'\n};"
+                }
+              ],
+              "directories": [
+                {
+                  "name": "utils",
+                  "contents": {
+                    "files": [
+                      {
+                        "name": "helper.js",
+                        "contents": "export function formatDate(date) {\n  return date.toISOString();\n}"
+                      },
+                      {
+                        "name": "logger.js",
+                        "contents": "export class Logger {\n  static log(msg) {\n    console.log(`[${new Date().toISOString()}] ${msg}`);\n  }\n}"
+                      }
+                    ],
+                    "directories": []
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+
+📦 Processing files: src/components/Button.js, src/components/Input.js, tests/helper.test.js
+
+=== Structure Prompt ===
+You are a code generation expert. Your task is to analyze project structures and generate code for the files within them. When presented with a JSON structure containing file paths and their intended contents, you should:
+
+1. Carefully examine the structure and understand the relationships between files
+2. Consider the project context and dependencies
+3. Generate appropriate, well-formatted code for each file
+4. Ensure consistency across related files
+5. Follow best practices and conventions for the relevant programming languages
+6. Include necessary imports/exports and handle dependencies correctly
+
+The structure will be provided in a standardized JSON format with a project.rootDirectory hierarchy. Each file in the structure will be clearly identified with its path and intended purpose.
+
+Respond only with the code for the requested files, maintaining proper formatting and including any necessary comments or documentation.
+
+
+=== User Prompt ===
+
+
+=== Project Structure ===
+{
+  "project": {
+    "rootDirectory": {
+      "name": "test-project",
+      "contents": {
+        "files": [],
+        "directories": [
+          {
+            "name": "src",
+            "contents": {
+              "files": [],
+              "directories": [
+                {
+                  "name": "components",
+                  "contents": {
+                    "files": [
+                      {
+                        "name": "Button.js",
+                        "contents": "export const Button = ({ text, onClick }) => {\n  return <button onClick={onClick}>{text}</button>;\n};"
+                      },
+                      {
+                        "name": "Input.js",
+                        "contents": "export const Input = ({ value, onChange }) => {\n  return <input value={value} onChange={onChange} />;\n};"
+                      }
+                    ],
+                    "directories": []
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "tests",
+            "contents": {
+              "files": [
+                {
+                  "name": "helper.test.js",
+                  "contents": "import { formatDate } from '../src/utils/helper';\n\ntest('formatDate returns ISO string', () => {\n  const date = new Date();\n  expect(formatDate(date)).toBe(date.toISOString());\n});"
+                }
+              ],
+              "directories": []
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+
+✅ Successfully processed 3 chunks

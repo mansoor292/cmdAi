@@ -1,0 +1,217 @@
+[
+    {
+        "ModelId": "amazon.titan-tg1-large",
+        "Status": "ACTIVE",
+        "available": true
+    },
+    {
+        "ModelId": "amazon.titan-image-generator-v1",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "amazon.titan-image-generator-v2:0",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "amazon.titan-text-premier-v1:0",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "amazon.nova-pro-v1:0",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "amazon.nova-lite-v1:0",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "amazon.nova-canvas-v1:0",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "amazon.nova-reel-v1:0",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "amazon.nova-micro-v1:0",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "amazon.titan-embed-g1-text-02",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "amazon.titan-text-lite-v1",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "amazon.titan-text-express-v1",
+        "Status": "ACTIVE",
+        "available": true
+    },
+    {
+        "ModelId": "amazon.titan-embed-text-v1",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "amazon.titan-embed-text-v2:0",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "amazon.titan-embed-image-v1",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "stability.stable-diffusion-xl-v1",
+        "Status": "LEGACY",
+        "available": false
+    },
+    {
+        "ModelId": "ai21.j2-grande-instruct",
+        "Status": "LEGACY",
+        "available": false
+    },
+    {
+        "ModelId": "ai21.j2-jumbo-instruct",
+        "Status": "LEGACY",
+        "available": false
+    },
+    {
+        "ModelId": "ai21.j2-mid",
+        "Status": "LEGACY",
+        "available": false
+    },
+    {
+        "ModelId": "ai21.j2-mid-v1",
+        "Status": "LEGACY",
+        "available": false
+    },
+    {
+        "ModelId": "ai21.j2-ultra",
+        "Status": "LEGACY",
+        "available": false
+    },
+    {
+        "ModelId": "ai21.j2-ultra-v1",
+        "Status": "LEGACY",
+        "available": false
+    },
+    {
+        "ModelId": "ai21.jamba-instruct-v1:0",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "ai21.jamba-1-5-large-v1:0",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "ai21.jamba-1-5-mini-v1:0",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "anthropic.claude-instant-v1",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "anthropic.claude-v2:1",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "anthropic.claude-v2",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "anthropic.claude-3-sonnet-20240229-v1:0",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "anthropic.claude-3-haiku-20240307-v1:0",
+        "Status": "ACTIVE",
+        "available": true
+    },
+    {
+        "ModelId": "anthropic.claude-3-5-sonnet-20240620-v1:0",
+        "Status": "ACTIVE",
+        "available": true
+    },
+    {
+        "ModelId": "cohere.command-text-v14",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "cohere.command-r-v1:0",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "cohere.command-r-plus-v1:0",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "cohere.command-light-text-v14",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "cohere.embed-english-v3",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "cohere.embed-multilingual-v3",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "meta.llama3-8b-instruct-v1:0",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "meta.llama3-70b-instruct-v1:0",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "mistral.mistral-7b-instruct-v0:2",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "mistral.mixtral-8x7b-instruct-v0:1",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "mistral.mistral-large-2402-v1:0",
+        "Status": "ACTIVE",
+        "available": false
+    },
+    {
+        "ModelId": "mistral.mistral-small-2402-v1:0",
+        "Status": "ACTIVE",
+        "available": false
+    }
+]

@@ -1,0 +1,145 @@
+{
+  "project": {
+    "name": "File Management App",
+    "rootDirectory": {
+      "name": "file-management-app",
+      "contents": {
+        "files": [
+          {
+            "name": "package.json",
+            "contents": ""
+          },
+          {
+            "name": "next.config.js",
+            "contents": ""
+          },
+          {
+            "name": ".env.local",
+            "contents": ""
+          },
+          {
+            "name": ".gitignore",
+            "contents": ""
+          }
+        ],
+        "directories": [
+          {
+            "name": "src",
+            "contents": {
+              "files": [],
+              "directories": [
+                {
+                  "name": "pages",
+                  "contents": {
+                    "files": [
+                      {
+                        "name": "index.js",
+                        "contents": ""
+                      },
+                      {
+                        "name": "_app.js",
+                        "contents": ""
+                      },
+                      {
+                        "name": "api",
+                        "contents": {
+                          "files": [
+                            {
+                              "name": "auth",
+                              "contents": {
+                                "files": [
+                                  {
+                                    "name": "[...nextauth].js",
+                                    "contents": ""
+                                  }
+                                ],
+                                "directories": []
+                              }
+                            }
+                          ],
+                          "directories": []
+                        }
+                      }
+                    ],
+                    "directories": []
+                  }
+                },
+                {
+                  "name": "components",
+                  "contents": {
+                    "files": [
+                      {
+                        "name": "Layout.js",
+                        "contents": ""
+                      },
+                      {
+                        "name": "FileList.js",
+                        "contents": ""
+                      },
+                      {
+                        "name": "FileUpload.js",
+                        "contents": ""
+                      }
+                    ],
+                    "directories": []
+                  }
+                },
+                {
+                  "name": "graphql",
+                  "contents": {
+                    "files": [
+                      {
+                        "name": "schema.js",
+                        "contents": ""
+                      },
+                      {
+                        "name": "resolvers.js",
+                        "contents": ""
+                      }
+                    ],
+                    "directories": []
+                  }
+                },
+                {
+                  "name": "lib",
+                  "contents": {
+                    "files": [
+                      {
+                        "name": "db.js",
+                        "contents": ""
+                      },
+                      {
+                        "name": "cognito.js",
+                        "contents": ""
+                      }
+                    ],
+                    "directories": []
+                  }
+                },
+                {
+                  "name": "styles",
+                  "contents": {
+                    "files": [
+                      {
+                        "name": "globals.css",
+                        "contents": ""
+                      }
+                    ],
+                    "directories": []
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "public",
+            "contents": {
+              "files": [],
+              "directories": []
+            }
+          }
+        ]
+      }
+    }
+  }
+}
