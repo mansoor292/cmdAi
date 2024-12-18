@@ -1,7 +1,0 @@
-0000000000000000000000000000000000000000 0a376d1c2a22bad512b31826faa43b4d6bcce1dc Mansoor <mansoor@catalogs.com> 1734279703 -0500	commit (initial): Initial commit: Add CLI chat application with AWS Bedrock support
-0a376d1c2a22bad512b31826faa43b4d6bcce1dc 0a376d1c2a22bad512b31826faa43b4d6bcce1dc Mansoor <mansoor@catalogs.com> 1734279710 -0500	Branch: renamed refs/heads/master to refs/heads/main
-0a376d1c2a22bad512b31826faa43b4d6bcce1dc 0ee214f1f50848683ceefb58dd45dac9c8618632 Mansoor <mansoor@catalogs.com> 1734284820 -0500	commit: feat: add /processfile command for creating file structures
-0ee214f1f50848683ceefb58dd45dac9c8618632 442b8cc13bbd284819a40a427172b94ab9d652af Mansoor <mansoor@catalogs.com> 1734287622 -0500	commit: added scripting and processfile features
-442b8cc13bbd284819a40a427172b94ab9d652af 87e05fa24c8d7d72fc77993177d75040d450be02 Mansoor <mansoor@catalogs.com> 1734316651 -0500	commit: added processsturcutre and file creation commands, tested to work
-9fe63f07a7e0d4f03cf8d45cf5240620a53404e3 83ac69f7d9f18ebd8a14b006f73adcd16620b304 Mansoor <mansoor@catalogs.com> 1734410789 -0500	commit: Add web terminal interface with Docker support
-83ac69f7d9f18ebd8a14b006f73adcd16620b304 106fdf482039a60f351ff471261573656a255e96 Mansoor <mansoor@catalogs.com> 1734479030 -0500	commit: feat: enhance chat context control
